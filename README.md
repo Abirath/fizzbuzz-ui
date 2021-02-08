@@ -2,7 +2,7 @@
 
 The application is built using ReactJS and Material UI
 - The code is written in JavaScript following functional programming pattern
-- Axios library is used to make API calls to the [FizzBuzzAPI] (https://github.com/Abirath/FizzBuzzAPI)
+- Axios library is used to make API calls to the [FizzBuzzAPI](https://github.com/Abirath/FizzBuzzAPI)
 
 **Note:** Make sure to run the [FizzBuzzAPI](https://github.com/Abirath/FizzBuzzAPI) project first to make the API up and running.
 
