@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# FizzBuzz UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The application is built using ReactJS and Material UI
+- The code is written in JavaScript following functional programming pattern
+- Axios library is used to make API calls to the [FizzBuzzAPI] (https://github.com/Abirath/FizzBuzzAPI)
 
-## Available Scripts
+**Note:** Make sure to run the [FizzBuzzAPI](https://github.com/Abirath/FizzBuzzAPI) project first to make the API up and running.
 
-In the project directory, you can run:
+## Frontend Features
 
-### `npm start`
+The webpage displays the list of values exposed by the FizzBuzzAPI. 
+- A table with two columns, **Number** and **Value** for the numbers **1** to **100** are displayed.
+- The value **"Fizz"** is displayed for multiples of **3**, **"Buzz"** for multiples of **5** and the value **"FizzBuzz"** for multiples of both **3** and **5**.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Running the frontend project
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The frontend repository was created using `create-react-app fizzbuzz-ui`
 
-### `npm test`
+To startup the frontend client run the following command.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- `npm install` - This will fetch the required node modules for the website to run (and for the other scripts below).
+- `npm start` - This will start the application for development
+- `npm run build` - Will create a production optimised build
+- `npm test` - Will run the front end tests
 
-### `npm run build`
+Ideally this application would run on port **3000**.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Creating an Azure app service.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.	Login to Azure portal.
+2.	Navigate to All services --> web --> app services. 
+3.	Add new app, configure name, and resource group then click create button. 
+4.	Hit refresh button to make sure the created app service shows up on the dashboard.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deploying the app to Azure:
 
-### `npm run eject`
+1.	Go to deployment center, select github as source control version and configure the path to the github repo.
+2.	Select the appropriate build provider and click continue.
+3.	Specify what node engine and the version will be used to the build provider in package.json file. 
+4.	Build the react app by executing `npm build` in the terminal. 
+5.	Now, navigate to the build folder and initialize the git repo by following the commands,
+-	`git init`
+-	`git add .`
+-	`git commit -m “Commit message”`
+-	`git remote add azure <git clone url>` (the url to clone will be provided in the azure overview page) 
+-	`git push azure master`
+ 
+Now, visit the live app by using the url on the overview page. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
